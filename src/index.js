@@ -5,6 +5,7 @@ const userRoutes = require('./routes/userRoutes')
 const {attendanceStatusChange} = require('./controllers/attendanceController')
 const studentRoutes = require('./routes/studentRoutes')
 const classRoutes = require('./routes/classRoutes')
+const smsRoutes = require('./routes/smsRoutes')
 
 const qrCode = require('qrcode');
 
@@ -33,6 +34,7 @@ app.patch("/qr/read/:id", attendanceStatusChange)
 app.use('/api/user', userRoutes)
 app.use('/api/students', studentRoutes)
 app.use('/api/class', classRoutes)
+app.use('/api/sms', smsRoutes);
 
 mongoose.connect(Mongo_URI)
     .then(() => {
