@@ -4,12 +4,7 @@ const router = express.Router()
 
 const {createStudent, attendanceStatusChange, classAttendanceStatusChange, getStudents, getStudent} = require('../controllers/attendanceController')
 
-router.get('/students', getStudents)
+router.patch('/:id', attendanceStatusChange)
 
-router.get('/student/:id', getStudent)
-
-router.patch('/classAttendanceStatus/:id', classAttendanceStatusChange)
-
-router.post('/', createStudent)
 
 module.exports = router

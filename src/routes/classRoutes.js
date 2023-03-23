@@ -15,3 +15,5 @@ router.post('/', createClass)
 router.patch('/addStudentClass/:id', addStudent)
 
 router.delete('/:id', deleteClass)
+
+module.exports = router

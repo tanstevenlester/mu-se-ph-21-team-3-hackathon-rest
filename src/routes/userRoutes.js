@@ -5,3 +5,5 @@ const {createUser, deleteUser} = require('../controllers/userControllers')
 
 router.post('/', createUser)
 router.delete('/:id', deleteUser)
+
+module.exports = router
