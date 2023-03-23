@@ -1,6 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const router = express.Router()
+const router = express.Router();
 
 const {createClass,  addStudent, removeStudent, deleteClass, getClass, getClasses} = require('../controllers/classContollers')
 

@@ -1,6 +1,4 @@
-const students = require('../models/studentModel')
-const mongoose = require('mongoose');
-
+const students = require('../models/studentModel');
 
 //create student
 const createStudent = async (req, res) => {
@@ -28,9 +26,9 @@ const getStudent = async (req, res) => {
 //tap to change attendance status
 const attendanceStatusChange = async(req, res) => {
     const {id} = req.params
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: 'No student found'})
-    }
+    // if (!mongoose.Types.ObjectId.isValid(id)) {
+    //     return res.status(404).json({error: 'No student found'})
+    // }
 
     const student = await students.findById(id)
 

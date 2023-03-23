@@ -1,5 +1,4 @@
 const Users = require('../models/classModel')
-const mongoose = require('mongoose');
 
 //create a user
 

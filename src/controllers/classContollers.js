@@ -1,5 +1,4 @@
 const Class = require('../models/classModel')
-const mongoose = require('mongoose');
 
 //create a Class
 
@@ -17,9 +16,9 @@ const createClass = async (req, res) => {
 const addStudent = async (req, res) => {
     const {id, className, students} = req.body
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: 'No class found'})
-    }
+    // if (!mongoose.Types.ObjectId.isValid(id)) {
+    //     return res.status(404).json({error: 'No class found'})
+    // }
 
     const Classdata = await Class.findById(id)
     const baseList = Classdata.students
@@ -33,9 +32,9 @@ const addStudent = async (req, res) => {
 const removeStudent = async (req, res) => {
     const {id, className, students} = req.body
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: 'No class found'})
-    }
+    // if (!mongoose.Types.ObjectId.isValid(id)) {
+    //     return res.status(404).json({error: 'No class found'})
+    // }
 
     const Classdata = await Class.findById(id)
     const baseList = Classdata.students
@@ -50,9 +49,9 @@ const removeStudent = async (req, res) => {
 const deleteClass = async (req, res) => {
     const {id} = req.params
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({error: 'No class found'})
-    }
+    // if (!mongoose.Types.ObjectId.isValid(id)) {
+    //     return res.status(404).json({error: 'No class found'})
+    // }
 
     const toDelete = await Class.findByIdAndDelete(id)
 
