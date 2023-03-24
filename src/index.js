@@ -33,10 +33,13 @@ app.use('/api/user', userRoutes)
 app.use('/api/students', studentRoutes)
 app.use('/api/class', classRoutes)
 
-Mongo_URI = "mongodb+srv://ManulifeUniversity:ManulifeUniversity2023@mernapplearn.iztg1lo.mongodb.net/?retryWrites=true&w=majority"
+//const Mongo_URI = "mongodb+srv://ManulifeUniversity:ManulifeUniversity2023@mernapplearn.iztg1lo.mongodb.net/?retryWrites=true&w=majority"
 
-mongoose.connect(Mongo_URI)
-    .then(() => {
-        app.listen(PORT, () => {
-            console.log(`🚀 App listening on ${PORT} ....`)});
-    })
+// mongoose.connect(Mongo_URI)
+//     .then(() => {
+//         app.listen(PORT, () => {
+//             console.log(`🚀 App listening on ${PORT} ....`)});
+//     })
+
+app.listen(PORT, () => {
+    console.log(`🚀 App listening on ${PORT} ....`)});

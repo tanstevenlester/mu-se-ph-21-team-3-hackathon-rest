@@ -1,9 +1,8 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const router = express.Router()
-const {createUser, deleteUser} = require('../controllers/userControllers')
+const {createuser, deleteUser, getAUser} = require('../controllers/userController')
+const router = require('express').Router();
 
-router.post('/', createUser)
+router.post('/', createuser)
+router.get('/:id', getAUser)
 router.delete('/:id', deleteUser)
 
 module.exports = router

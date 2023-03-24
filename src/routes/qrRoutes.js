@@ -1,10 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const router = express.Router()
+const { studentAttendanceStatusChange } = require('../controllers/studentControllers')
+const router = require('express').Router();
 
-const {createStudent, attendanceStatusChange, classAttendanceStatusChange, getStudents, getStudent} = require('../controllers/attendanceController')
-
-router.patch('/:id', attendanceStatusChange)
-
+router.patch('/ChangeAttendanceStatus/:id', studentAttendanceStatusChange)
 
 module.exports = router
