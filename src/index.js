@@ -40,7 +40,7 @@ app.use(cors());
 app.use("/api/qr", qrRoutes);
 
 app.use('/api/user', userRoutes);
-app.use('/api/students', studentRoutes);
+// app.use('/api/students', studentRoutes);
 app.use('/api/class', classRoutes);
 
 var con = mysql.createConnection({
