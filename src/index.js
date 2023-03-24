@@ -43,12 +43,14 @@ app.get('/students', (req, res) => {
     return res.status(200).json(students.students)
 })
 
-app.get('/students/:id', (req, res) => (req, res) => {
+app.get('/students/:id', (req, res) => {
     const {id} = req.params
 
     const student = students.students.filter(student => student.id === id)
     return res.status(200).json(student)
 })
+
+console.log(students.students)
 
 app.patch('/students/updateAttendace/:id', (req, res) => {
     const {id} = req.params
@@ -83,6 +85,10 @@ app.delete('/students/:id', (req, res) => {
     //const student = students.students.filter(student => student.id === id)
     const filteredStudents = students.students.filter(student => student.id !== id)
     return res.status(200)
+})
+
+app.get('/', (req, res) => {
+    return res.send('Working')
 })
 
 
